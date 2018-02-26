@@ -6,14 +6,29 @@ import sqlite3
 from common import *
 
 def test(prog_path,pattern,target,timeout):
-    with subprocess.Popen([prog_path,pattern,target],stdout=subprocess.PIPE,universal_newlines=True) as process:
+    with subprocess.Popen([prog_path,pattern,target],stdout=subprocess.PIPE,stderr=subprocess.PIPE,universal_newlines=True) as process:
         try:
             process.wait(timeout=timeout)
-            solution,execution_time = process.stdout.read().strip().split(',')
-            return (solution,execution_time)
+            output = process.stdout.read()
+            errput = process.stderr.read()
+            if process.returncode == 0:
+                solution,execution_time = output.strip().split(',')
+                return {
+                    'status' : 'OK',
+                    'solution' : solution,
+                    'execution_time' : execution_time,
+                }
+            else:
+                return {
+                    'status' : 'FAIL',
+                    'returncode': process.returncode,
+                    'stderr' : errput,
+                }
         except subprocess.TimeoutExpired:
             process.kill()
-            return (None,None)
+            return {
+                'status' : 'TIMEOUT',
+            }
 
 def main():
     parser = argparse.ArgumentParser()
@@ -64,9 +79,11 @@ def main():
                     '''SELECT COUNT(*) FROM results
                        WHERE prog=? AND pattern=? AND target=?
                        AND execution_time IS NOT NULL
+                       AND execution_time != -1
                     ''',
                     (prog['id'],pattern,target)
                 ).fetchone()[0]
+                print(successful_cnt)
                 if successful_cnt > 0:
                     known_tests.append((prog,pattern,target))
                 else:
@@ -88,10 +105,21 @@ def main():
     for i,test_group in enumerate(test_groups):
         print('Running test group {}'.format(i))
         for prog,pattern,target in test_group:
-            sys.stdout.write('.')
-            sys.stdout.flush()
-            solution,execution_time = test(prog['path'],pattern,target,TIMEOUT)
-            insert_result(con,(prog['id'],pattern,target,solution,execution_time,TIMEOUT))
+            result = test(prog['path'],pattern,target,TIMEOUT)
+            if result['status'] == 'OK':
+                insert_result(con,(prog['id'],pattern,target,result['solution'],result['execution_time'],TIMEOUT))
+                sys.stdout.write('.')
+                sys.stdout.flush()
+            elif result['status'] == 'TIMEOUT':
+                insert_result(con,(prog['id'],pattern,target,None,None,TIMEOUT))
+                sys.stdout.write('t')
+                sys.stdout.flush()
+            elif result['status'] == 'FAIL':
+                insert_result(con,(prog['id'],pattern,target,None,-1,TIMEOUT))
+                sys.stdout.write('x')
+                sys.stdout.flush()
+                print('FAIL: {} {} {}'.format(prog['path'],pattern,target),file=sys.stderr)
+                print(result['stderr'],file=sys.stderr)
         if test_group:
             print()
 

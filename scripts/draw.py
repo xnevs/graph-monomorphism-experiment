@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 from common import *
 
-def plot(ax,right,times):
+def plot(ax,name,right,times):
     count = range(1,len(times)+1)
 
     x = [0]
@@ -15,7 +15,7 @@ def plot(ax,right,times):
     y.extend(c for c in count for _ in (0,1))
     y.pop()
     
-    color = ax.plot(x,y)[0].get_color()
+    color = ax.plot(x,y,label=name)[0].get_color()
     if right > times[-1]:
         ax.plot([x[-1],right],[y[-1],y[-1]],color=color,linestyle='dashed')
 
@@ -72,7 +72,9 @@ def main():
     fig = plt.figure()
     ax = fig.add_subplot(1,1,1)
     for prog_path,prog_times in progs_times.items():
-        plot(ax,1.01*max_time,prog_times)
+        if prog_times:
+            plot(ax,prog_path,1.01*max_time,prog_times)
+    plt.legend()
     plt.show()
 
 

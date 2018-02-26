@@ -18,7 +18,7 @@ def create_tables(con):
                 pattern TEXT NOT NULL,  -- path to the pattern file as passed on the cmd line
                 target TEXT NOT NULL,   -- path to the target file as passed on the cmd line
                 solution INTEGER,       -- the reported solution
-                execution_time INTEGER, -- the reported execution time in milliseconds
+                execution_time INTEGER, -- the reported execution time in milliseconds, or -1 if crashed
                 timeout INTEGER,        -- the set timeout in seconds
                 timestamp INTEGER NOT NULL DEFAULT CURRENT_TIMESTAMP, -- when the test was run
                 FOREIGN KEY(prog) REFERENCES progs(id)

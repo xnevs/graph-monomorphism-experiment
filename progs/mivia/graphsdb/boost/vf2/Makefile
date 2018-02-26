@@ -1,5 +1,5 @@
 CXX = g++
-CXX_FLAGS = -std=c++14 -O3 -march=native -mtune=native
+CXX_FLAGS = -std=c++14 -O3 -march=native
 
 .PHONY: all
 all: a.out

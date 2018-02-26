@@ -5,7 +5,7 @@
 
 #include <boost/graph/adjacency_list.hpp> 
 
-#include "ullimp/graph/ullimp_sub_graph_iso.hpp"
+#include <ullimp/graph/ullimp_sub_graph_iso.hpp>
 
 unsigned int read1(std::istream & in) {
     unsigned char a, b;
