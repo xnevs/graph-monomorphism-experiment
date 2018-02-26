@@ -43,10 +43,7 @@ def should_run(con, prog_id, pattern, target, timeout, repeat):
         return repeat
 
 def main():
-  parser = argparse.ArgumentParser()
-  parser.add_argument('prog',nargs='+')
-  parser.add_argument('-d','--database',required=True)
-  parser.add_argument('-t','--timeout',type=int,default=5)
+  parser = make_argument_parser()
   parser.add_argument('-r','--repeat',action='store_true',default=False)
   args = parser.parse_args()
 
@@ -55,8 +52,6 @@ def main():
   REPEAT = args.repeat
 
   prog_paths = args.prog
-
-  #examples = [line.split() for line in sys.stdin]
 
   con = sqlite3.connect(DATABASE_PATH)
   con.row_factory = sqlite3.Row
@@ -97,6 +92,7 @@ def main():
       else:
         sys.stdout.write('s')
         sys.stdout.flush()
+  print()
 
 if __name__ == '__main__':
   main()

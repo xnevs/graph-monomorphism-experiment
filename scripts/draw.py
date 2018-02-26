@@ -20,10 +20,7 @@ def plot(ax,name,right,times):
         ax.plot([x[-1],right],[y[-1],y[-1]],color=color,linestyle='dashed')
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('prog',nargs='+')
-    parser.add_argument('-d','--database',required=True)
-    # parser.add_argument('-t','--timeout',type=int,default=5)
+    parser = make_argument_parser()
     # TODO add argument '--since'
     parser.add_argument('-f','--file')
     args = parser.parse_args()

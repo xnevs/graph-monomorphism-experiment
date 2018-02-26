@@ -1,4 +1,5 @@
 import hashlib
+import argparse
 
 def create_tables(con):
   with con:
@@ -64,6 +65,13 @@ def insert_result(con,data):
         data)
 
 def digest(x):
-    h = hashlib.md5()
-    h.update(x)
-    return h.hexdigest()
+  h = hashlib.md5()
+  h.update(x)
+  return h.hexdigest()
+
+def make_argument_parser():
+  parser = argparse.ArgumentParser()
+  parser.add_argument('prog',nargs='+')
+  parser.add_argument('-d','--database',required=True)
+  parser.add_argument('-t','--timeout',type=int,default=5)
+  return parser
