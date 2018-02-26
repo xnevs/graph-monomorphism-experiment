@@ -63,9 +63,9 @@ def main():
                 if min_execution_time > max_time:
                     max_time =  min_execution_time
             elif max_timeout is not None:
-                print('{} {} {} takes longer than {}.'.format(prog['path'],pattern,target,max_timeout))
+                print('{} {} {} takes longer than {} s.'.format(prog['path'],pattern,target,max_timeout), file=sys.stderr)
             else:
-                print('No result for {} {} {}'.format(prog['path'],pattern,target))
+                print('No result for {} {} {}'.format(prog['path'],pattern,target), file=sys.stderr)
         prog_times.sort()
         progs_times[prog['path']] = prog_times
 
