@@ -1,0 +1,8 @@
+/algs/*
+/datasets/*
+
+*.a
+*.o
+*.out
+*.pyc
+*.db
