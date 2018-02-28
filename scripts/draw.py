@@ -19,6 +19,18 @@ def plot(ax,name,right,times):
   if right > times[-1]:
     ax.plot([x[-1],right],[y[-1],y[-1]],color=color,linestyle='dashed')
 
+def parse_results(con):
+  result = con.execute('''
+      SELECT MIN(execution_time) AS execution_time,
+             MAX(timeout) AS timeout,
+             progs.id AS prog_id,
+             results.pattern AS pattern,
+             results.target AS target
+      FROM results
+      JOIN progs ON progs.id = results.prog
+      GROUP BY progs.id,results.pattern,results.target''')
+  return {(row['prog_id'],row['pattern'],row['target']): (row['execution_time'], row['timeout']) for row in result}
+
 def main():
   parser = make_argument_parser()
   # TODO add argument '--since'
@@ -42,17 +54,17 @@ def main():
       prog_digest = digest(prog_f.read())
     prog = get_prog(con,prog_digest)
     progs.append(prog)
+    
+  results = parse_results(con)
+  
+  con.close()
 
   progs_times = dict()
   max_time = 0
   for prog in progs:
     prog_times = []
     for pattern,target in examples:
-      min_execution_time,max_timeout = con.execute('''
-          SELECT MIN(execution_time),MAX(timeout)
-          FROM results
-          WHERE prog=? AND pattern=? AND target=?''',
-          (prog['id'], pattern, target)).fetchone()
+      min_execution_time,max_timeout = results[(prog['id'],pattern,target)]
       if min_execution_time is not None:
         prog_times.append(min_execution_time)
         if min_execution_time > max_time:
