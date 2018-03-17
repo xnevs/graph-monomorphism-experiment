@@ -1,11 +1,11 @@
 CXX = g++
-CXX_FLAGS = -g -std=c++14 -O3 -march=native
+CXX_FLAGS = -std=c++14 -O3 -march=native
 
 ifndef EXPERIMENT_ROOT
 $(error EXPERIMENT_ROOT is not set)
 endif
 
-INC = -I$(EXPERIMENT_ROOT)/algs/ullimp_test/include
+INC = -I$(EXPERIMENT_ROOT)/algs/gramo/include
 
 .PHONY: all
 all: a.out

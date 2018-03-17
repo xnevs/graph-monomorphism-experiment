@@ -1,4 +1,5 @@
 import sys
+from collections import defaultdict
 import argparse
 import sqlite3
 import matplotlib
@@ -64,15 +65,19 @@ def main():
   for prog in progs:
     prog_times = []
     for pattern,target in examples:
-      min_execution_time,max_timeout = results[(prog['id'],pattern,target)]
-      if min_execution_time is not None:
-        prog_times.append(min_execution_time)
-        if min_execution_time > max_time:
-          max_time =  min_execution_time
-      elif max_timeout is not None:
-        print('{} {} {} takes longer than {} s.'.format(prog['path'], pattern, target, max_timeout), file=sys.stderr)
-      else:
-        print('No result for {} {} {}'.format(prog['path'], pattern, target), file=sys.stderr)
+      try:
+        min_execution_time,max_timeout = results[(prog['id'],pattern,target)]
+        if min_execution_time is not None:
+          if min_execution_time >= 0:
+            prog_times.append(min_execution_time)
+            if min_execution_time > max_time:
+              max_time =  min_execution_time
+          else:
+            print('{} {} {} crashed.'.format(prog['path'], pattern, target), file=sys.stderr)
+        else:
+          print('{} {} {} takes longer than {} s.'.format(prog['path'], pattern, target, max_timeout), file=sys.stderr)
+      except KeyError:
+        print('No result for {0} {1} {2}. Excluded.'.format(prog['path'], pattern, target), file=sys.stderr)
     prog_times.sort()
     progs_times[prog['path']] = prog_times
 

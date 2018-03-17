@@ -19,7 +19,7 @@ def test(prog_path,pattern,target,timeout):
             'execution_time': execution_time}
       else:
         return {
-            'status': 'FAIL',
+            'status': 'ERROR',
             'returncode': process.returncode,
             'stdout': output,
             'stderr': errput}
@@ -80,7 +80,7 @@ def main():
           insert_result(con, (prog['id'], pattern, target, None, None, TIMEOUT))
           sys.stdout.write('t')
           sys.stdout.flush()
-        elif result['status'] == 'FAIL':
+        elif result['status'] == 'ERROR':
           insert_result(con, (prog['id'], pattern, target, None, -1, TIMEOUT))
           sys.stdout.write('x')
           sys.stdout.flush()
