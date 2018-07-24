@@ -1,6 +1,7 @@
 import sys
 from collections import defaultdict
 import argparse
+import shlex
 import sqlite3
 import matplotlib
 import matplotlib.pyplot as plt
@@ -44,7 +45,8 @@ def main():
 
   prog_paths = args.prog
 
-  examples = [line.split() for line in sys.stdin]
+  #examples = [line.split() for line in sys.stdin]
+  examples = [shlex.split(line) for line in sys.stdin]
 
   con = sqlite3.connect(DATABASE_PATH)
   con.row_factory = sqlite3.Row

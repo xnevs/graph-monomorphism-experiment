@@ -1,5 +1,6 @@
 import sys
 import argparse
+import shlex
 import subprocess
 import sqlite3
 
@@ -68,10 +69,12 @@ def main():
     progs.append(prog)
 
   for line in sys.stdin:
-    pattern, target = line.split()
+    #pattern, target = line.split()
+    pattern, target = shlex.split(line)
     for prog in progs:
       if should_run(con, prog['id'], pattern, target, TIMEOUT, REPEAT):
         result = test(prog['path'], pattern, target, TIMEOUT)
+        print(result)
         if result['status'] == 'OK':
           insert_result(con, (prog['id'], pattern, target, result['solution'], result['execution_time'], TIMEOUT))
           sys.stdout.write('.')
