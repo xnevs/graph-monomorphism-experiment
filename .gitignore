@@ -1,4 +1,4 @@
-/datasets/*
+/datasets
 
 *.a
 *.o
