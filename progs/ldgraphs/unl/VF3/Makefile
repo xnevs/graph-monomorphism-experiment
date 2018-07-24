@@ -5,7 +5,7 @@ ifndef EXPERIMENT_ROOT
 $(error EXPERIMENT_ROOT is not set)
 endif
 
-INC = -I$(EXPERIMENT_ROOT)/algs/vflib-3.0.1/include
+INC = -I$(EXPERIMENT_ROOT)/algs/VF3/include
 
 .PHONY: all
 all: a.out
