@@ -29,14 +29,14 @@ int main(int argc, char *argv[]) {
 
   AttributeComparator* nodeComparator = new IntAttrComparator();
   AttributeComparator* edgeComparator = new DefaultAttrComparator();
-  AttributeDeconstructor* nodeAttrDeco = new VoidAttrDeCo();
-  AttributeDeconstructor* edgeAttrDeco = new IntAttrDeCo();
+  AttributeDeconstructor* nodeAttrDeco = new IntAttrDeCo();
+  AttributeDeconstructor* edgeAttrDeco = new VoidAttrDeCo();
 
 
   ifstream in{pattern_filename, ios::in|ios::binary};
   if(!in.is_open()) return 1;
   Graph * pattern = new Graph();
-  read_ldgraphs(in,pattern);
+  read_ldgraphs_lab(in,pattern);
   
   in.close();
 
@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
   in.open(target_filename, ios::in|ios::binary);
   if(!in.is_open()) return 1;
   Graph * target = new Graph();
-  read_ldgraphs(in,target);
+  read_ldgraphs_lab(in,target);
   in.close();
 
   MatchListener * matchListener = new EmptyMatchListener();

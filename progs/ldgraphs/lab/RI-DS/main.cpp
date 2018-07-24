@@ -28,13 +28,13 @@ int main(int argc, char *argv[]) {
   ifstream in{pattern_filename, ios::in|ios::binary};
   if(!in.is_open()) return 1;
   Graph * pattern = new Graph();
-  read_ldgraphs(in,pattern);
+  read_ldgraphs_lab(in,pattern);
   in.close();
 
   in.open(target_filename, ios::in|ios::binary);
   if(!in.is_open()) return 1;
   Graph * target = new Graph();
-  read_ldgraphs(in,target);
+  read_ldgraphs_lab(in,target);
   in.close();
 
   MatchListener * matchListener = new EmptyMatchListener();
