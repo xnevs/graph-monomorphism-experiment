@@ -1,3 +1,27 @@
 [submodule "algs/sics"]
 	path = algs/sics
 	url = git@github.com:xnevs/sics.git
+[submodule "algs/ullimp"]
+	path = algs/ullimp
+	url = git@github.com:xnevs/ullimp.git
+[submodule "algs/RI"]
+	path = algs/RI
+	url = git@github.com:xnevs/RI.git
+[submodule "algs/RI-DS"]
+	path = algs/RI-DS
+	url = git@github.com:xnevs/RI-DS.git
+[submodule "algs/pathLAD"]
+	path = algs/pathLAD
+	url = git@github.com:xnevs/pathLAD.git
+[submodule "algs/FocusSearchCpp"]
+	path = algs/FocusSearchCpp
+	url = git@github.com:xnevs/FocusSearchCpp.git
+[submodule "algs/VF2"]
+	path = algs/VF2
+	url = git@github.com:xnevs/VF2.git
+[submodule "algs/VF3"]
+	path = algs/VF3
+	url = git@github.com:xnevs/VF3.git
+[submodule "algs/glasgow-subgraph-solver"]
+	path = algs/glasgow-subgraph-solver
+	url = git@github.com:xnevs/glasgow-subgraph-solver.git
