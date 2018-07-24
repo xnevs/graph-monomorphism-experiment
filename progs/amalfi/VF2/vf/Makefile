@@ -5,8 +5,8 @@ ifndef EXPERIMENT_ROOT
 $(error EXPERIMENT_ROOT is not set)
 endif
 
-INC = -I$(EXPERIMENT_ROOT)/algs/vflib-2.0.6/include
-LIB = -L$(EXPERIMENT_ROOT)/algs/vflib-2.0.6/lib
+INC = -I$(EXPERIMENT_ROOT)/algs/VF2/include
+LIB = -L$(EXPERIMENT_ROOT)/algs/VF2/lib
 
 libs = -lvf
 

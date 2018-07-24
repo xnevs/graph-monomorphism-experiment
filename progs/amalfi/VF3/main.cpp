@@ -6,13 +6,12 @@
 
 #include <match.hpp>
 #include <argraph.hpp>
+#include <argloader.hpp>
 #include <nodesorter.hpp>
 #include <probability_strategy.hpp>
 #include <vf3_sub_state.hpp>
 #include <nodesorter.hpp>
 #include <nodeclassifier.hpp>
-
-#include <read_amalfi.h>
 
 template<> long long VF3SubState<int,int,Empty,Empty>::instance_count = 0;
 

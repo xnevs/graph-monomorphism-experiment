@@ -5,13 +5,16 @@ ifndef EXPERIMENT_ROOT
 $(error EXPERIMENT_ROOT is not set)
 endif
 
-INC = -I$(EXPERIMENT_ROOT)/algs/vflib-3.0.1/include -I$(EXPERIMENT_ROOT)/extensions/vflib-3.0.1/include
+INC = -I$(EXPERIMENT_ROOT)/algs/VF2/include
+LIB = -L$(EXPERIMENT_ROOT)/algs/VF2/lib
+
+libs = -lvf
 
 .PHONY: all
 all: a.out
 
 a.out: main.cpp
-	$(CXX) $(CXX_FLAGS) $(INC) -o $@ main.cpp
+	$(CXX) $(CXX_FLAGS) $(INC) $(LIB) -o $@ main.cpp $(libs)
 
 .PHONY: clean
 clean:
