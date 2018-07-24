@@ -8,12 +8,12 @@ endif
 INC = -I$(EXPERIMENT_ROOT)/algs/sics/include
 
 .PHONY: all
-all: a.out stats
+all: a.out stats.out
 
 a.out: main.cpp
 	$(CXX) $(CXX_FLAGS) $(INC) -DSICS_ALGORITHM=$(shell basename "$(CURDIR)") -o $@ main.cpp
 
-stats: main.cpp
+stats.out: main.cpp
 	$(CXX) $(CXX_FLAGS) $(INC) -DSICS_ALGORITHM=$(shell basename "$(CURDIR)") -DSICS_DO_STATS -o $@ main.cpp
 	
 .PHONY: clean
