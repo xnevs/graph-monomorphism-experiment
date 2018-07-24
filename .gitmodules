@@ -1,0 +1,3 @@
+[submodule "algs/sics"]
+	path = algs/sics
+	url = git@github.com:xnevs/sics.git
