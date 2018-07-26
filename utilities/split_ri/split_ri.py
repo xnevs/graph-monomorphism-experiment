@@ -1,6 +1,5 @@
 import sys
 import os
-from collections import defaultdict
 
 def split_populate(filename, path):
   with open(filename) as f:
@@ -11,8 +10,9 @@ def split_populate(filename, path):
         if crnt_file is not None:
           crnt_file.close()
           count += 1
-        new_filepath = os.path.join(path, '{:03d}.txt'.format(count))
+        new_filepath = os.path.join(path, '{:05d}.txt'.format(count))
         crnt_file = open(new_filepath, 'x')
+        print(line.strip(), file=crnt_file)
       else:
         print(line.strip(), file=crnt_file)
 
