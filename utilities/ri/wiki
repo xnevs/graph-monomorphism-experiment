@@ -1,0 +1,37 @@
+It seems that all of the examples in RI-Datasets are duplicated.
+Once in singleton files and once grouped.
+
+The AIDS dataset is the only one that has only the grouped version.
+
+And run split_ri_file.py on AIDS to get singles:
+  python ./utilities/ri/split_ri_file.py datasets/ri/AIDS/AIDS40000/AIDO99SD.40000.txt datasets/ri/AIDS/AIDS40000/targets
+
+split_ri.py not really needed since all other datasets already have singles.
+
+To remove duplicates delete all of 'all' and 'grouped' folders and
+'db.all', 'q0.25.all', 'q0.5.all' and 'q-1.all' files:
+  rm -R datasets/ri/Graemlin/1024/all
+  rm -R datasets/ri/Graemlin/2048/all
+  rm -R datasets/ri/Graemlin/64/all
+  rm -R datasets/ri/Graemlin/128/all
+  rm -R datasets/ri/Graemlin/512/all
+  rm -R datasets/ri/Graemlin/1/all
+  rm -R datasets/ri/Graemlin/32/all
+  rm -R datasets/ri/Graemlin/256/all
+  rm -R datasets/ri/Graemlin/unique/all
+
+  rm -R datasets/ri/PDBSv2v3/grouped
+  rm -R datasets/ri/PDBSv1/grouped
+
+  rm datasets/ri/PPI/udistr/1024/db.all
+  rm datasets/ri/PPI/udistr/2048/db.all
+  rm datasets/ri/PPI/udistr/64/db.all
+  rm datasets/ri/PPI/udistr/128/db.all
+  rm datasets/ri/PPI/udistr/1/db.all
+  rm datasets/ri/PPI/udistr/32/db.all
+  rm datasets/ri/PPI/udistr/256/db.all
+  rm datasets/ri/PPI/unique/db.all
+
+  rm datasets/ri/PPI/unique/q0.25.all
+  rm datasets/ri/PPI/unique/q0.5.all
+  rm datasets/ri/PPI/unique/q-1.all
