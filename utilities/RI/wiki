@@ -35,3 +35,8 @@ To remove duplicates delete all of 'all' and 'grouped' folders and
   rm datasets/ri/PPI/unique/q0.25.all
   rm datasets/ri/PPI/unique/q0.5.all
   rm datasets/ri/PPI/unique/q-1.all
+
+
+
+fix_PPI.py is intended for the PPI dataset, where all the target graph files are bidirectional and queries are written as directed.
+fix_PPI.py makes them undirected by discarding duplicated edges.
