@@ -1,0 +1,48 @@
+#include <cstdint>
+
+#include <iostream>
+#include <fstream>
+#include <chrono>
+
+#include <sics/stats.h>
+
+#include <sics/read_gal.h>
+
+#include <sics/adjacency_listmat.h>
+
+#include <sics/vertex_order.h>
+
+#include <sics/forwardchecking_mrv_degreeprune_ind.h>
+#include <sics/forwardchecking_mrv_degreeprune_refine_ind.h>
+
+int main(int argc, char * argv[]) {
+  using namespace sics;
+
+  char const * g_filename = argv[1];
+  char const * h_filename = argv[2];
+
+  std::ifstream in{g_filename,std::ios::in|std::ios::binary};
+  auto g = read_gal<adjacency_listmat<uint16_t, bidirectional_tag>>(in);
+  in.close();
+  in.open(h_filename,std::ios::in|std::ios::binary);
+  auto h = read_gal<adjacency_listmat<uint16_t, bidirectional_tag>>(in);
+  in.close();
+
+  std::chrono::time_point<std::chrono::steady_clock> start, end;
+  std::chrono::milliseconds elapsed;
+
+  start = std::chrono::steady_clock::now();
+
+  int count = 0;
+  SICS_ALGORITHM(
+      g,
+      h,
+      [&count]() {++count; return true;});
+
+  end = std::chrono::steady_clock::now();
+  elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+
+  std::cout << count << "," << elapsed.count() << std::endl;
+
+  SICS_STATS_PRINT(std::cout);
+}
