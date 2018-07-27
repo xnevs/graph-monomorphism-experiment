@@ -1,5 +1,5 @@
 CXX = g++
-CXX_FLAGS = -std=c++14 -O3 -march=native
+CXX_FLAGS = -std=c++14 -O3 -march=native -DNDEBUG
 
 ifndef EXPERIMENT_ROOT
 $(error EXPERIMENT_ROOT is not set)
