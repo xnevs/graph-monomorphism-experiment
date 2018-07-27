@@ -13,10 +13,9 @@ with open(filepath, 'r') as f:
     for i in range(n):
       tf.write(next(f))
     edge_count = int(next(f).strip())
-    edges = set()
-    for i in range(edge_count):
-       edges.add(tuple(sorted(map(int, next(f).split()))))
+    edges = set(tuple(sorted(map(int, line.split()))) for line in f.read().splitlines()[:edge_count])
     print(len(edges), file=tf)
-    for u, v in sorted(list(edges)):
+    for u, v in sorted(edges):
       print(u, v, file=tf)
+    
 shutil.move(tempfilepath, filepath)
