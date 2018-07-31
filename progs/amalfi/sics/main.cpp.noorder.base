@@ -14,6 +14,7 @@
 
 #include <sics/forwardchecking_mrv_degreeprune_ind.h>
 #include <sics/forwardchecking_mrv_degreeprune_refine_ind.h>
+#include <sics/forwardchecking_bitset_mrv_degreeprune_ind.h>
 
 int main(int argc, char * argv[]) {
   using namespace sics;
