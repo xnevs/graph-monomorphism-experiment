@@ -24,6 +24,7 @@ def plot(ax,name,right,times):
 def parse_results(con):
   result = con.execute('''
       SELECT MIN(execution_time) AS execution_time,
+             MIN(state_count) AS state_count,
              MAX(timeout) AS timeout,
              progs.id AS prog_id,
              results.pattern AS pattern,
@@ -31,7 +32,7 @@ def parse_results(con):
       FROM results
       JOIN progs ON progs.id = results.prog
       GROUP BY progs.id,results.pattern,results.target''')
-  return {(row['prog_id'],row['pattern'],row['target']): (row['execution_time'], row['timeout']) for row in result}
+  return {(row['prog_id'],row['pattern'],row['target']): (row['execution_time'], row['state_count'], row['timeout']) for row in result}
 
 def main():
   parser = make_argument_parser()
@@ -45,7 +46,6 @@ def main():
 
   prog_paths = args.prog
 
-  #examples = [line.split() for line in sys.stdin]
   examples = [shlex.split(line) for line in sys.stdin]
 
   con = sqlite3.connect(DATABASE_PATH)
@@ -62,24 +62,30 @@ def main():
   
   con.close()
 
+  filtered_examples = []
+  for pattern, target in examples:
+    for prog in progs:
+      if (prog['id'], pattern, target) not in results:
+        print('No result for {0} {1} {2}. Excluded.'.format(prog['path'], pattern, target), file=sys.stderr)
+        break
+    else:
+      filtered_examples.append((pattern, target))
+  
   progs_times = dict()
   max_time = 0
   for prog in progs:
     prog_times = []
-    for pattern,target in examples:
-      try:
-        min_execution_time,max_timeout = results[(prog['id'],pattern,target)]
-        if min_execution_time is not None:
-          if min_execution_time >= 0:
-            prog_times.append(min_execution_time)
-            if min_execution_time > max_time:
-              max_time =  min_execution_time
-          else:
-            print('{} {} {} crashed.'.format(prog['path'], pattern, target), file=sys.stderr)
+    for pattern,target in filtered_examples:
+      min_execution_time, min_state_count, max_timeout = results[(prog['id'],pattern,target)]
+      if min_execution_time is not None:
+        if min_execution_time >= 0:
+          prog_times.append(min_execution_time)
+          if min_execution_time > max_time:
+            max_time =  min_execution_time
         else:
-          print('{} {} {} takes longer than {} s.'.format(prog['path'], pattern, target, max_timeout), file=sys.stderr)
-      except KeyError:
-        print('No result for {0} {1} {2}. Excluded.'.format(prog['path'], pattern, target), file=sys.stderr)
+          print('{} {} {} crashed.'.format(prog['path'], pattern, target), file=sys.stderr)
+      else:
+        print('{} {} {} takes longer than {} s.'.format(prog['path'], pattern, target, max_timeout), file=sys.stderr)
     prog_times.sort()
     progs_times[prog['path']] = prog_times
 

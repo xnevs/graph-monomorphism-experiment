@@ -18,6 +18,7 @@ def create_tables(con):
             target TEXT NOT NULL,   -- path to the target file as passed on the cmd line
             solution INTEGER,       -- the reported solution
             execution_time INTEGER, -- the reported execution time in milliseconds, or -1 if crashed
+            state_count INTEGER,    -- the reported search space state count, NULL if not available
             timeout INTEGER,        -- the set timeout in seconds
             timestamp INTEGER NOT NULL DEFAULT CURRENT_TIMESTAMP, -- when the test was run
             FOREIGN KEY(prog) REFERENCES progs(id))''')
@@ -61,7 +62,7 @@ def get_max_timeout(con, prog_id, pattern, target):
 def insert_result(con,data):
   with con:
     con.execute(
-        'INSERT INTO results (prog,pattern,target,solution,execution_time,timeout) VALUES (?,?,?,?,?,?)',
+        'INSERT INTO results (prog,pattern,target,solution,execution_time,state_count,timeout) VALUES (?,?,?,?,?,?,?)',
         data)
 
 def digest(x):

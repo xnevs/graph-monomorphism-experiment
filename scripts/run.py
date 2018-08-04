@@ -13,11 +13,14 @@ def test(prog_path,pattern,target,timeout):
       output = process.stdout.read()
       errput = process.stderr.read()
       if process.returncode == 0:
-        solution,execution_time = output.strip().split(',')
+        lines = output.strip().splitlines()
+        solution, execution_time = lines[0].strip().split(',')
+        state_count = lines[1].strip() if len(lines) > 1 else None
         return {
             'status': 'OK',
             'solution': solution,
-            'execution_time': execution_time}
+            'execution_time': execution_time,
+            'state_count': state_count}
       else:
         return {
             'status': 'ERROR',
@@ -69,33 +72,19 @@ def main():
     progs.append(prog)
 
   for line in sys.stdin:
-    #pattern, target = line.split()
     pattern, target = shlex.split(line)
     for prog in progs:
       if should_run(con, prog['id'], pattern, target, TIMEOUT, REPEAT):
         result = test(prog['path'], pattern, target, TIMEOUT)
         print(result)
         if result['status'] == 'OK':
-          insert_result(con, (prog['id'], pattern, target, result['solution'], result['execution_time'], TIMEOUT))
-          sys.stdout.write('.')
-          sys.stdout.flush()
+          insert_result(con, (prog['id'], pattern, target, result['solution'], result['execution_time'], result['state_count'], TIMEOUT))
         elif result['status'] == 'TIMEOUT':
-          insert_result(con, (prog['id'], pattern, target, None, None, TIMEOUT))
-          sys.stdout.write('t')
-          sys.stdout.flush()
+          insert_result(con, (prog['id'], pattern, target, None, None, None, TIMEOUT))
         elif result['status'] == 'ERROR':
           insert_result(con, (prog['id'], pattern, target, None, -1, TIMEOUT))
-          sys.stdout.write('x')
-          sys.stdout.flush()
-          print('FAIL: {} {} {}'.format(prog['path'], pattern, target), file=sys.stderr)
-          print(result['stdout'], file=sys.stderr)
-          print('==============================================')
-          print(result['stderr'], file=sys.stderr)
-          print('==============================================')
       else:
-        sys.stdout.write('s')
-        sys.stdout.flush()
-  print()
+        print('SKIPPED')
 
 if __name__ == '__main__':
   main()
