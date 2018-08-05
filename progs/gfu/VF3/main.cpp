@@ -39,6 +39,11 @@ int main(int argc, char *argv[]) {
   ARGraph<std::string, Empty> target(&target_loader);
   in.close();
 
+  chrono::time_point<chrono::steady_clock> start, end;
+  chrono::milliseconds elapsed;
+
+  start = chrono::steady_clock::now();
+
   int n;
   int nodes1, nodes2;
   nodes1 = pattern.NodeCount();
@@ -51,11 +56,6 @@ int main(int argc, char *argv[]) {
   NodeClassifier<std::string,Empty> classifier2(&pattern, classifier);
   std::vector<int> class_patt = classifier2.GetClasses();
   std::vector<int> class_targ = classifier.GetClasses();
-
-  chrono::time_point<chrono::steady_clock> start, end;
-  chrono::milliseconds elapsed;
-
-  start = chrono::steady_clock::now();
 
   VF3NodeSorter<std::string, Empty, SubIsoNodeProbability<std::string, Empty> > sorter(&target);
   std::vector<node_id> sorted = sorter.SortNodes(&pattern);
