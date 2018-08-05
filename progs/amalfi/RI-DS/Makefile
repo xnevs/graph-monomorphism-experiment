@@ -5,7 +5,7 @@ ifndef EXPERIMENT_ROOT
 $(error EXPERIMENT_ROOT is not set)
 endif
 
-INC = -I$(EXPERIMENT_ROOT)/algs/RI-DS/include -I$(EXPERIMENT_ROOT)/algs/RI-DS/rilib -I$(EXPERIMENT_ROOT)/extensions
+INC = -I$(EXPERIMENT_ROOT)/algs/RI-DS/include -I$(EXPERIMENT_ROOT)/algs/RI-DS/rilib
 
 .PHONY: all
 all: a.out
