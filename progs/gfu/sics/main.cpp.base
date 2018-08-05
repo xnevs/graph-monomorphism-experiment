@@ -39,6 +39,7 @@
 #include <sics/forwardchecking_ind.h>
 #include <sics/forwardchecking_degreeprune_ind.h>
 #include <sics/forwardchecking_bitset_degreeprune_ind.h>
+#include <sics/forwardchecking_bitset_degreesequenceprune_ind.h>
 #include <sics/lazyforwardchecking_ind.h>
 #include <sics/lazyforwardchecking_degreeprune_ind.h>
 #include <sics/lazyforwardchecking_low_ind.h>
