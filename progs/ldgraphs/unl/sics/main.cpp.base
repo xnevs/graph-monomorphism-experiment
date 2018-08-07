@@ -41,6 +41,7 @@
 #include <sics/forwardchecking_bitset_degreesequenceprune_ind.h>
 #include <sics/lazyforwardchecking_ind.h>
 #include <sics/lazyforwardchecking_degreeprune_ind.h>
+#include <sics/lazyforwardchecking_degreesequenceprune_ind.h>
 #include <sics/lazyforwardchecking_low_ind.h>
 #include <sics/lazyforwardchecking_low_degreeprune_ind.h>
 #include <sics/lazyforwardchecking_parent_ind.h>
@@ -48,6 +49,10 @@
 #include <sics/lazyforwardchecking_low_parent_ind.h>
 #include <sics/lazyforwardchecking_low_parent_degreeprune_ind.h>
 #include <sics/lazyforwardchecking_parent_degreesequenceprune_ind.h>
+#include <sics/lazyforwardchecking_low_bitset_degreeprune_ind.h>
+#include <sics/lazyforwardchecking_low_bitset_degreesequenceprune_ind.h>
+#include <sics/lazyforwardcheckingbackjumping_low_bitset_degreeprune_ind.h>
+#include <sics/lazyforwardcheckingbackjumping_low_bitset_degreesequenceprune_ind.h>
 
 int main(int argc, char * argv[]) {
   using namespace sics;

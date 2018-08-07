@@ -13,8 +13,6 @@
 #include <sics/vertex_order.h>
 
 #include <sics/forwardchecking_mrv_degreeprune_ind.h>
-#include <sics/lazyforwardchecking_mrv_ind.h>
-#include <sics/lazyforwardchecking_mrv_degreeprune_ind.h>
 #include <sics/forwardchecking_bitset_mrv_degreeprune_ind.h>
 #include <sics/forwardchecking_bitset_mrv_degreeprune_ac1_ind.h>
 #include <sics/forwardchecking_bitset_mrv_degreeprune_countingalldifferent_ind.h>
