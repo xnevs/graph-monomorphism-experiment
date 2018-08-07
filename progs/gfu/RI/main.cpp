@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
 
   Graph * pattern = new Graph();
   read_graph(pattern_filename, pattern, GFT_GFU);
-  
+
   MaMaConstrFirst* mama = new MaMaConstrFirst(*pattern);
   mama->build(*pattern);
 

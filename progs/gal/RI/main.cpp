@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
   if(!in.is_open()) return 1;
   Graph * pattern = new Graph();
   read_gal(in,pattern);
-  
+
   in.close();
 
   MaMaConstrFirst* mama = new MaMaConstrFirst(*pattern);

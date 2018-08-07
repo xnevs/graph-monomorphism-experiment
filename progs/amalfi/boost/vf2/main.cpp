@@ -3,7 +3,7 @@
 #include <fstream>
 #include <chrono>
 
-#include <boost/graph/adjacency_list.hpp> 
+#include <boost/graph/adjacency_list.hpp>
 #include <boost/graph/vf2_sub_graph_iso.hpp>
 
 
@@ -30,9 +30,9 @@ R read_amalfi(std::istream & in) {
     return g;
 }
 
-using graph_type =  boost::adjacency_list<boost::setS, boost::vecS, boost::bidirectionalS>; 
+using graph_type =  boost::adjacency_list<boost::setS, boost::vecS, boost::bidirectionalS>;
 
-int main(int argc, char *argv[]) { 
+int main(int argc, char *argv[]) {
     using namespace std;
 
     char * pattern_filename = argv[1];

@@ -19,12 +19,12 @@ int main(int argc, char * argv[]) {
   start = std::chrono::steady_clock::now();
 
   UllImp alg(g, h);
-  
+
   alg.find(true);
 
   end = std::chrono::steady_clock::now();
   elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-  
+
   std::cout << alg.isoCount << "," << elapsed.count() << std::endl;
 
   return 0;

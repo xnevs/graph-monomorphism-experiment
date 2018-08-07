@@ -103,7 +103,7 @@ auto main(int argc, char * argv[]) -> int
     try {
         char const * pattern_filename = argv[1];
         char const * target_filename = argv[2];
-      
+
         auto algorithm = sequential_subgraph_isomorphism;
 
         Params params;
