@@ -31,7 +31,11 @@
 #include <sics/backtracking_degreeprune_adjacentconsistency_precount_ind.h>
 #include <sics/backtracking_parent_adjacentconsistency_precount_ind.h>
 #include <sics/backtracking_parent_degreeprune_adjacentconsistency_precount_ind.h>
+#include <sics/backtracking_bitset_degreeprune_ind.h>
+#include <sics/backtracking_bitset_degreesequenceprune_ind.h>
 #include <sics/backjumping_ind.h>
+#include <sics/backjumping_bitset_degreeprune_ind.h>
+#include <sics/backjumping_bitset_degreesequenceprune_ind.h>
 #include <sics/conflictbackjumping_ind.h>
 #include <sics/conflictbackjumping_degreeprune_ind.h>
 #include <sics/backmarking_ind.h>
