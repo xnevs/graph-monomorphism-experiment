@@ -34,10 +34,13 @@
 #include <sics/backtracking_bitset_degreeprune_ind.h>
 #include <sics/backtracking_bitset_degreesequenceprune_ind.h>
 #include <sics/backjumping_ind.h>
+#include <sics/backjumping_degreeprune_ind.h>
+#include <sics/backjumping_degreesequenceprune_ind.h>
 #include <sics/backjumping_bitset_degreeprune_ind.h>
 #include <sics/backjumping_bitset_degreesequenceprune_ind.h>
 #include <sics/conflictbackjumping_ind.h>
 #include <sics/conflictbackjumping_degreeprune_ind.h>
+#include <sics/conflictbackjumping_degreesequenceprune_ind.h>
 #include <sics/backmarking_ind.h>
 #include <sics/backmarking_degreeprune_ind.h>
 #include <sics/forwardchecking_ind.h>
