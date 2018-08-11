@@ -82,7 +82,7 @@ def main():
         elif result['status'] == 'TIMEOUT':
           insert_result(con, (prog['id'], pattern, target, None, None, None, TIMEOUT))
         elif result['status'] == 'ERROR':
-          insert_result(con, (prog['id'], pattern, target, None, -1, TIMEOUT))
+          insert_result(con, (prog['id'], pattern, target, None, -1, None, TIMEOUT))
       else:
         print('SKIPPED')
 
