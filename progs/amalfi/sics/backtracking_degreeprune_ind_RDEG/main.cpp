@@ -1,0 +1,97 @@
+#include <cstdint>
+
+#include <iostream>
+#include <fstream>
+#include <chrono>
+
+#include <sics/stats.h>
+
+#include <sics/read_amalfi.h>
+
+#include <sics/adjacency_listmat.h>
+
+#include <sics/vertex_order.h>
+
+#include <sics/backtracking_ind.h>
+#include <sics/backtracking_degreeprune_ind.h>
+#include <sics/backtracking_adjacentconsistency_ind.h>
+#include <sics/backtracking_degreeprune_adjacentconsistency_ind.h>
+#include <sics/backtracking_adjacentconsistency_forwardcount_ind.h>
+#include <sics/backtracking_degreeprune_adjacentconsistency_forwardcount_ind.h>
+#include <sics/backtracking_forwardcount_ind.h>
+#include <sics/backtracking_parent_ind.h>
+#include <sics/backtracking_parent_degreeprune_ind.h>
+#include <sics/backtracking_parent_adjacentconsistency_ind.h>
+#include <sics/backtracking_parent_degreeprune_adjacentconsistency_ind.h>
+#include <sics/backtracking_parent_forwardcount_ind.h>
+#include <sics/backtracking_parent_adjacentconsistency_forwardcount_ind.h>
+#include <sics/backtracking_parent_degreeprune_adjacentconsistency_forwardcount_ind.h>
+#include <sics/backtracking_adjacentconsistency_precount_ind.h>
+#include <sics/backtracking_degreeprune_adjacentconsistency_precount_ind.h>
+#include <sics/backtracking_parent_adjacentconsistency_precount_ind.h>
+#include <sics/backtracking_parent_degreeprune_adjacentconsistency_precount_ind.h>
+#include <sics/backtracking_bitset_degreeprune_ind.h>
+#include <sics/backtracking_bitset_degreesequenceprune_ind.h>
+#include <sics/backjumping_ind.h>
+#include <sics/backjumping_degreeprune_ind.h>
+#include <sics/backjumping_degreesequenceprune_ind.h>
+#include <sics/backjumping_bitset_degreeprune_ind.h>
+#include <sics/backjumping_bitset_degreesequenceprune_ind.h>
+#include <sics/conflictbackjumping_ind.h>
+#include <sics/conflictbackjumping_degreeprune_ind.h>
+#include <sics/conflictbackjumping_degreesequenceprune_ind.h>
+#include <sics/backmarking_ind.h>
+#include <sics/backmarking_degreeprune_ind.h>
+#include <sics/forwardchecking_ind.h>
+#include <sics/forwardchecking_degreeprune_ind.h>
+#include <sics/forwardchecking_bitset_degreeprune_ind.h>
+#include <sics/forwardchecking_bitset_degreesequenceprune_ind.h>
+#include <sics/lazyforwardchecking_ind.h>
+#include <sics/lazyforwardchecking_degreeprune_ind.h>
+#include <sics/lazyforwardchecking_degreesequenceprune_ind.h>
+#include <sics/lazyforwardchecking_low_ind.h>
+#include <sics/lazyforwardchecking_low_degreeprune_ind.h>
+#include <sics/lazyforwardchecking_parent_ind.h>
+#include <sics/lazyforwardchecking_parent_degreeprune_ind.h>
+#include <sics/lazyforwardchecking_parent_degreesequenceprune_ind.h>
+#include <sics/lazyforwardchecking_low_parent_ind.h>
+#include <sics/lazyforwardchecking_low_parent_degreeprune_ind.h>
+#include <sics/lazyforwardchecking_low_bitset_degreeprune_ind.h>
+#include <sics/lazyforwardchecking_low_bitset_degreesequenceprune_ind.h>
+#include <sics/lazyforwardcheckingbackjumping_low_bitset_degreeprune_ind.h>
+#include <sics/lazyforwardcheckingbackjumping_low_bitset_degreesequenceprune_ind.h>
+
+int main(int argc, char * argv[]) {
+  using namespace sics;
+
+  char const * g_filename = argv[1];
+  char const * h_filename = argv[2];
+
+  std::ifstream in{g_filename,std::ios::in|std::ios::binary};
+  auto g = read_amalfi<adjacency_listmat<uint16_t, bidirectional_tag>>(in);
+  in.close();
+  in.open(h_filename,std::ios::in|std::ios::binary);
+  auto h = read_amalfi<adjacency_listmat<uint16_t, bidirectional_tag>>(in);
+  in.close();
+
+  std::chrono::time_point<std::chrono::steady_clock> start, end;
+  std::chrono::milliseconds elapsed;
+
+  start = std::chrono::steady_clock::now();
+
+  auto index_order_g = vertex_order_RDEG(g);
+
+  int count = 0;
+  SICS_ALGORITHM(
+      g,
+      h,
+      [&count]() {++count; return true;},
+      index_order_g);
+
+  end = std::chrono::steady_clock::now();
+  elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+
+  std::cout << count << "," << elapsed.count() << std::endl;
+
+  SICS_STATS_PRINT(std::cout);
+}
