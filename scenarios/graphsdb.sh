@@ -1,0 +1,1 @@
+python scripts/run.py --database=results.db --timeout=20 ./progs/amalfi/RI-DS/a.out ./progs/amalfi/VF3/a.out ./progs/amalfi/glasgow-subgraph-solver/a.out ./progs/amalfi/sics/lazyforwardchecking_low_bitset_degreeprune_ind/a.out ./progs/amalfi/sics/backtracking_parent_degreeprune_adjacentconsistency_forwardcount_ind/a.out < test_cases/mivia/graphsdb/interleaved.head
