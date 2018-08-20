@@ -1,0 +1,1 @@
+python scripts/run.py --database=results.db --timeout=30 ./progs/amalfi/RI-DS/a.out ./progs/amalfi/VF3/a.out ./progs/amalfi/glasgow-subgraph-solver/a.out ./progs/amalfi/sics/lazyforwardcheckingbackjumping_low_bitset_degreesequenceprune_ind/a.out ./progs/amalfi/sics/forwardchecking_bitset_mrv_degreesequenceprune_ind/a.out < test_cases/network-datasets/interleaved.sample
