@@ -168,182 +168,156 @@
 ./datasets/solnon/newSIPbenchmarks/scalefree/F.12/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/F.12/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/027.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/096.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern13 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target130
-
 ./datasets/solnon/newSIPbenchmarks/LV/g8 ./datasets/solnon/newSIPbenchmarks/LV/g28
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern6 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target362
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.38-0.38-0.44-8-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.38-0.38-0.44-8-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/B.01/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/B.01/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/013.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/034.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern28 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target65
-
 ./datasets/solnon/newSIPbenchmarks/LV/g28 ./datasets/solnon/newSIPbenchmarks/LV/g57
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern6 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target189
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.42-0.46-0.50-6-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.42-0.46-0.50-6-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/C.02/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/C.02/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/147.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/041.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern25 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target40
-
 ./datasets/solnon/newSIPbenchmarks/LV/g16 ./datasets/solnon/newSIPbenchmarks/LV/g78
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern4 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target14
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.42-0.46-0.50-1-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.42-0.46-0.50-1-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/F.03/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/F.03/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/007.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/084.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern8 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target95
-
 ./datasets/solnon/newSIPbenchmarks/LV/g33 ./datasets/solnon/newSIPbenchmarks/LV/g68
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern1 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target251
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.80-0.72-0.74-8-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.80-0.72-0.74-8-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/C.14/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/C.14/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/173.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/009.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern7 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target54
-
 ./datasets/solnon/newSIPbenchmarks/LV/g51 ./datasets/solnon/newSIPbenchmarks/LV/g60
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern4 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target111
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.78-0.72-0.74-8-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.78-0.72-0.74-8-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/A.08/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/A.08/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/064.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/153.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern42 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target72
-
 ./datasets/solnon/newSIPbenchmarks/LV/g56 ./datasets/solnon/newSIPbenchmarks/LV/g86
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern1 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target316
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.42-0.46-0.50-3-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.42-0.46-0.50-3-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/E.08/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/E.08/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/061.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/033.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern44 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target9
-
 ./datasets/solnon/newSIPbenchmarks/LV/g38 ./datasets/solnon/newSIPbenchmarks/LV/g103
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern6 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target146
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.66-0.64-0.66-1-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.66-0.64-0.66-1-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/A.17/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/A.17/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/090.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/120.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern7 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target80
-
 ./datasets/solnon/newSIPbenchmarks/LV/g89 ./datasets/solnon/newSIPbenchmarks/LV/g112
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern5 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target90
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.40-0.46-0.48-2-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.40-0.46-0.48-2-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/C.04/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/C.04/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/082.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/021.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern38 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target49
-
 ./datasets/solnon/newSIPbenchmarks/LV/g39 ./datasets/solnon/newSIPbenchmarks/LV/g58
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern5 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target238
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.80-0.72-0.74-1-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.80-0.72-0.74-1-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/A.09/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/A.09/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/071.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/027.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern36 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target45
-
 ./datasets/solnon/newSIPbenchmarks/LV/g5 ./datasets/solnon/newSIPbenchmarks/LV/g72
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern1 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target1
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.38-0.38-0.44-4-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.38-0.38-0.44-4-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/A.19/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/A.19/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/001.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/171.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern14 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target141
-
 ./datasets/solnon/newSIPbenchmarks/LV/g21 ./datasets/solnon/newSIPbenchmarks/LV/g23
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern6 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target50
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.70-0.66-0.70-6-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.70-0.66-0.70-6-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/C.05/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/C.05/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/009.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/007.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern19 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target40
-
 ./datasets/solnon/newSIPbenchmarks/LV/g30 ./datasets/solnon/newSIPbenchmarks/LV/g70
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern6 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target416
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.54-0.56-0.58-3-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.54-0.56-0.58-3-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/B.10/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/B.10/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/112.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/059.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern12 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target99
-
 ./datasets/solnon/newSIPbenchmarks/LV/g9 ./datasets/solnon/newSIPbenchmarks/LV/g57
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern5 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target92
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.74-0.68-0.70-3-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.74-0.68-0.70-3-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/A.18/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/A.18/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/089.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/021.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern22 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target62
-
 ./datasets/solnon/newSIPbenchmarks/LV/g41 ./datasets/solnon/newSIPbenchmarks/LV/g96
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern3 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target501
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.82-0.74-0.76-4-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.82-0.74-0.76-4-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/C.12/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/C.12/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/100.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/100.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern43 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target41
-
 ./datasets/solnon/newSIPbenchmarks/LV/g24 ./datasets/solnon/newSIPbenchmarks/LV/g33
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern6 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target179
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.84-0.76-0.76-2-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.84-0.76-0.76-2-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/A.11/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/A.11/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/122.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/169.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern23 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target20
-
 ./datasets/solnon/newSIPbenchmarks/LV/g52 ./datasets/solnon/newSIPbenchmarks/LV/g61
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern5 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target193
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.64-0.62-0.64-5-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.64-0.62-0.64-5-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/F.10/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/F.10/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/149.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/151.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern35 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target64
-
 ./datasets/solnon/newSIPbenchmarks/LV/g16 ./datasets/solnon/newSIPbenchmarks/LV/g62
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern2 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target271
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.60-0.58-0.62-8-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.60-0.58-0.62-8-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/A.02/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/A.02/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/144.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/137.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern30 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target104
-
 ./datasets/solnon/newSIPbenchmarks/LV/g47 ./datasets/solnon/newSIPbenchmarks/LV/g54
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern3 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target234
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.44-0.46-0.50-8-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.44-0.46-0.50-8-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/A.10/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/A.10/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/075.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/151.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern8 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target75
-
 ./datasets/solnon/newSIPbenchmarks/LV/g20 ./datasets/solnon/newSIPbenchmarks/LV/g110
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern5 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target529
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.84-0.76-0.76-8-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.84-0.76-0.76-8-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/B.06/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/B.06/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/162.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/069.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern28 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target12
-
 ./datasets/solnon/newSIPbenchmarks/LV/g26 ./datasets/solnon/newSIPbenchmarks/LV/g87
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern6 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target124
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.56-0.56-0.60-3-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.56-0.56-0.60-3-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/B.07/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/B.07/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/028.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/176.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern35 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target54
-
 ./datasets/solnon/newSIPbenchmarks/LV/g55 ./datasets/solnon/newSIPbenchmarks/LV/g112
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern3 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target165
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.50-0.52-0.54-8-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.50-0.52-0.54-8-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/B.11/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/B.11/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/002.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/064.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern2 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target28
-
 ./datasets/solnon/newSIPbenchmarks/LV/g27 ./datasets/solnon/newSIPbenchmarks/LV/g49
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern1 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target143
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.78-0.72-0.74-5-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.78-0.72-0.74-5-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/A.14/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/A.14/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/149.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/143.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern42 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target39
-
 ./datasets/solnon/newSIPbenchmarks/LV/g27 ./datasets/solnon/newSIPbenchmarks/LV/g36
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern2 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target431
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.42-0.46-0.50-8-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.42-0.46-0.50-8-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/E.06/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/E.06/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/177.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/038.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern28 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target62
-
 ./datasets/solnon/newSIPbenchmarks/LV/g96 ./datasets/solnon/newSIPbenchmarks/LV/g97
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern4 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target180
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.68-0.64-0.68-3-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.68-0.64-0.68-3-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/B.19/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/B.19/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/146.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/038.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern27 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target60
-
 ./datasets/solnon/newSIPbenchmarks/LV/g44 ./datasets/solnon/newSIPbenchmarks/LV/g108
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern4 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target100
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.84-0.76-0.76-1-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.84-0.76-0.76-1-target
 ./datasets/solnon/newSIPbenchmarks/scalefree/E.16/pattern ./datasets/solnon/newSIPbenchmarks/scalefree/E.16/target
 ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/078.txt ./datasets/solnon/newSIPbenchmarks/biochemicalReactions/046.txt
 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/patterns/pattern4 ./datasets/solnon/newSIPbenchmarks/images-CVIU11/targets/target26
-
 ./datasets/solnon/newSIPbenchmarks/LV/g3 ./datasets/solnon/newSIPbenchmarks/LV/g101
 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/patterns/pattern4 ./datasets/solnon/newSIPbenchmarks/meshes-CVIU11/targets/target109
 ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.52-0.54-0.56-6-pattern ./datasets/solnon/newSIPbenchmarks/phase/phase-30-150-0.52-0.54-0.56-6-target
