@@ -17,6 +17,7 @@
 #include <sics/forwardchecking_bitset_mrv_degreeprune_ac1_ind.h>
 #include <sics/forwardchecking_bitset_mrv_degreeprune_countingalldifferent_ind.h>
 #include <sics/forwardchecking_bitset_mrv_degreesequenceprune_ind.h>
+#include <sics/forwardchecking_bitset_mrv_degreesequenceprune_ac1_ind.h>
 #include <sics/forwardchecking_bitset_mrv_degreesequenceprune_countingalldifferent_ind.h>
 
 int main(int argc, char * argv[]) {
