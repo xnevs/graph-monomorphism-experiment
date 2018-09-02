@@ -8,6 +8,15 @@ import matplotlib.pyplot as plt
 
 from common import *
 
+def onclick(ax):
+  def handler(event):
+    for line in ax.get_lines():
+      if line.contains(event)[0]:
+        print(line.get_label())
+    print()
+    print()
+  return handler
+
 def plot(ax,name,right,times):
   count = range(1,len(times)+1)
 
@@ -19,7 +28,7 @@ def plot(ax,name,right,times):
   
   color = ax.plot(x,y,label=name)[0].get_color()
   if right > times[-1]:
-    ax.plot([x[-1],right],[y[-1],y[-1]],color=color,linestyle='dashed')
+    ax.plot([x[-1],right],[y[-1],y[-1]],color=color,linestyle='dashed',label='_'+name)
 
 def parse_results(con):
   result = con.execute('''
@@ -91,6 +100,9 @@ def main():
 
   fig = plt.figure()
   ax = fig.add_subplot(1,1,1)
+
+  fig.canvas.mpl_connect('button_release_event', onclick(ax))
+  
   for prog_path,prog_times in progs_times.items():
     if prog_times:
       plot(ax,prog_path,1.01*max_time,prog_times)
