@@ -5,6 +5,8 @@ import shlex
 import sqlite3
 import matplotlib
 import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1.inset_locator import zoomed_inset_axes
+from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 
 from common import *
 
@@ -47,6 +49,7 @@ def main():
   parser = make_argument_parser()
   # TODO add argument '--since'
   parser.add_argument('-f','--file')
+  parser.add_argument('-z','--zoom',default=None)
   args = parser.parse_args()
 
   DATABASE_PATH = args.database
@@ -54,6 +57,10 @@ def main():
   FILE_PATH = args.file
 
   prog_paths = args.prog
+
+  zoom_limits = args.zoom
+  if zoom_limits is not None:
+    zoom_limits = [int(x) for x in zoom_limits.split(',')]
 
   examples = [shlex.split(line) for line in sys.stdin]
 
@@ -100,13 +107,27 @@ def main():
 
   fig = plt.figure()
   ax = fig.add_subplot(1,1,1)
+  if zoom_limits is not None:
+    axins = zoomed_inset_axes(ax, 4, loc=10)
+    mark_inset(ax, axins, loc1=1, loc2=3, fc="none", ec="0.5")
 
   fig.canvas.mpl_connect('button_release_event', onclick(ax))
   
   for prog_path,prog_times in progs_times.items():
     if prog_times:
       plot(ax,prog_path,1.01*max_time,prog_times)
-  plt.legend()
+      if zoom_limits is not None:
+        plot(axins,prog_path,1.01*max_time,prog_times)
+
+  ax.legend()
+
+  if zoom_limits is not None:
+    axins.set_xlim(zoom_limits[0], zoom_limits[1])
+    axins.set_ylim(zoom_limits[2], zoom_limits[3])
+
+    axins.set_xticks([])
+    axins.set_yticks([])
+  
   plt.show()
 
 if __name__ == '__main__':
