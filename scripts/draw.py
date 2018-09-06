@@ -60,7 +60,10 @@ def main():
 
   zoom_limits = args.zoom
   if zoom_limits is not None:
-    zoom_limits = [int(x) for x in zoom_limits.split(',')]
+    zoom_limits = zoom_limits.split(',')
+    zoom_scale = float(zoom_limits.pop(0))
+    zoom_loc = int(zoom_limits.pop(0))
+    zoom_limits = [int(x) for x in zoom_limits]
 
   examples = [shlex.split(line) for line in sys.stdin]
 
@@ -108,7 +111,7 @@ def main():
   fig = plt.figure()
   ax = fig.add_subplot(1,1,1)
   if zoom_limits is not None:
-    axins = zoomed_inset_axes(ax, 4, loc=10)
+    axins = zoomed_inset_axes(ax, zoom_scale, loc=zoom_loc)
     mark_inset(ax, axins, loc1=1, loc2=3, fc="none", ec="0.5")
 
   fig.canvas.mpl_connect('button_release_event', onclick(ax))
