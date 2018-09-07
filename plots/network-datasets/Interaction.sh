@@ -1,0 +1,1 @@
+python scripts/draw.py --database=results/network-datasets.db --timeout=20 ./progs/amalfi/RI-DS/a.out ./progs/amalfi/RI/a.out ./progs/amalfi/VF3/a.out ./progs/amalfi/glasgow-subgraph-solver/a.out ./progs/amalfi/sics/lazyforwardcheckingbackjumping_low_bitset_degreeprune_ind/a.out < test_cases/network-datasets/Interaction.sample

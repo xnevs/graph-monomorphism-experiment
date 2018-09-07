@@ -1,0 +1,1 @@
+python scripts/draw.py --database=results/graphsdb.db --timeout=20 ./progs/amalfi/sics/forwardchecking_ind/a.out ./progs/amalfi/sics/forwardchecking_degreeprune_ind/a.out ./progs/amalfi/sics/forwardchecking_degreesequenceprune_ind/a.out < test_cases/mivia/graphsdb/si_bvg
