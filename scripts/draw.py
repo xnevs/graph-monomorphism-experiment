@@ -27,8 +27,26 @@ def plot(ax,name,right,times):
   y = [0,0]
   y.extend(c for c in count for _ in (0,1))
   y.pop()
-  
-  color = ax.plot(x,y,label=name)[0].get_color()
+
+  label = name
+  if 'RI-DS' in name:
+    label = 'RI-Ds'
+  elif 'RI' in name:
+    label = 'RI'
+  elif 'VF3' in name:
+    label = 'VF3'
+  elif 'glasgow' in name:
+    label = 'Glasgow'
+  elif 'backtracking_parent_degreeprune_adjacentconsistency_forwardcount_ind' in name:
+    label = 'SICS BT+'
+  elif 'lazyforwardcheckingbackjumping_low_bitset_degreeprune_ind' in name:
+    label = 'SICS LFCBJ+'
+  elif 'forwardchecking_bitset_mrv_degreesequenceprune_ind' in name:
+    label = 'SICS FCMRV+'
+  elif 'forwardchecking_bitset_mrv_degreesequenceprune_countingalldifferent_ind' in name:
+    label = 'SICS FCMRV+ Hall'
+    
+  color = ax.plot(x,y,label=label)[0].get_color()
   if right > times[-1]:
     ax.plot([x[-1],right],[y[-1],y[-1]],color=color,linestyle='dashed',label='_'+name)
 
@@ -109,7 +127,7 @@ def main():
     prog_times.sort()
     progs_times[prog['path']] = prog_times
 
-  fig = plt.figure()
+  fig = plt.figure(figsize=(4.5,4.5))
   ax = fig.add_subplot(1,1,1)
   if zoom_limits is not None:
     axins = zoomed_inset_axes(ax, zoom_scale, loc=10)
@@ -137,7 +155,8 @@ def main():
 
     axins.set_xticks([])
     axins.set_yticks([])
-  
+
+  plt.tight_layout()
   plt.show()
 
 if __name__ == '__main__':
