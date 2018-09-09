@@ -72,10 +72,11 @@ def main():
 
   progs = []
   for prog_path in prog_paths:
-    with open(prog_path,'rb') as prog_f:
-      prog_digest = digest(prog_f.read())
-    prog = get_prog(con,prog_digest)
-    progs.append(prog)
+    if prog_path != 'null':
+      with open(prog_path,'rb') as prog_f:
+        prog_digest = digest(prog_f.read())
+      prog = get_prog(con,prog_digest)
+      progs.append(prog)
     
   results = parse_results(con)
   
@@ -116,11 +117,17 @@ def main():
 
   fig.canvas.mpl_connect('button_release_event', onclick(ax))
   
-  for prog_path,prog_times in progs_times.items():
-    if prog_times:
-      plot(ax,prog_path,1.01*max_time,prog_times)
+  for prog_path in prog_paths:
+    if prog_path == 'null':
+      ax.plot([], [])
       if zoom_limits is not None:
-        plot(axins,prog_path,1.01*max_time,prog_times)
+        axins.plot([], [])
+    else:
+      prog_times = progs_times.get(prog_path, None)
+      if prog_times:
+        plot(ax,prog_path,1.01*max_time,prog_times)
+        if zoom_limits is not None:
+          plot(axins,prog_path,1.01*max_time,prog_times)
 
   ax.legend()
 
