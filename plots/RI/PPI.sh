@@ -1,1 +1,1 @@
-python scripts/draw.py --database=results/RI-newtest.db --timeout=20 ./progs/gfu/RI-DS/a.out ./progs/gfu/RI/a.out ./progs/gfu/VF3/a.out ./progs/gfu/glasgow-subgraph-solver/a.out ./progs/gfu/sics/forwardchecking_bitset_mrv_degreesequenceprune_ind/a.out < test_cases/RI/PPI
+python scripts/draw.py --database=results/RI-newtest.db --timeout=20 null null ./progs/gfu/sics/forwardchecking_bitset_mrv_degreesequenceprune_ind/a.out null ./progs/gfu/RI-DS/a.out ./progs/gfu/RI/a.out ./progs/gfu/VF3/a.out ./progs/gfu/glasgow-subgraph-solver/a.out < test_cases/RI/PPI

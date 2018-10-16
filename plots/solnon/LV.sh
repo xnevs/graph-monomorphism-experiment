@@ -1,1 +1,1 @@
-python scripts/draw.py --database=results/solnon.db --timeout=20 ./progs/gal/RI-DS/a.out ./progs/gal/RI/a.out ./progs/gal/VF3/a.out ./progs/gal/glasgow-subgraph-solver/a.out ./progs/gal/sics/lazyforwardcheckingbackjumping_low_bitset_degreeprune_ind/a.out < test_cases/solnon/LV
+python scripts/draw.py --database=results/solnon.db --timeout=20 null ./progs/gal/sics/lazyforwardcheckingbackjumping_low_bitset_degreeprune_ind/a.out null null ./progs/gal/RI-DS/a.out ./progs/gal/RI/a.out ./progs/gal/VF3/a.out ./progs/gal/glasgow-subgraph-solver/a.out < test_cases/solnon/LV
